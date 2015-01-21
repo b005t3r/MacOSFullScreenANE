@@ -7,14 +7,14 @@
 
 FREObject MacOSFullScreen_enableFullScreen(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
 {
-    //We should be okay to do this, even on 10.6, according to this post:
-    //http://www.cocoabuilder.com/archive/cocoa/311124-implementing-full-screen-for-10-7-but-app-should-also-run-on-10-6.html
-    //We can't use [NSApp mainWindow] - didn't appear to work
-    //This seems to though:
-    NSArray * allWindows = [NSApp windows];
-    if (allWindows.count > 0)
+    NSApplicationPresentationOptions presentationOptions = [NSApplication sharedApplication].presentationOptions;
+    presentationOptions |= NSApplicationPresentationFullScreen;
+    [NSApplication sharedApplication].presentationOptions = presentationOptions;
+    
+    NSWindow *mainWindow = [NSApplication sharedApplication].mainWindow;
+    
+    if (mainWindow != nil)
     {
-        NSWindow *mainWindow = [allWindows  objectAtIndex: 0];
         NSWindowCollectionBehavior behavior = [mainWindow collectionBehavior];
         behavior |= NSWindowCollectionBehaviorFullScreenPrimary;
         [mainWindow setCollectionBehavior:behavior];
@@ -41,16 +41,15 @@ void contextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, u
 
 void contextFinalizer(FREContext ctx)
 {
-   return;
+    return;
 }
 
 void MacOSFullScreenInitializer(void** extData, FREContextInitializer* ctxInitializer, FREContextFinalizer* ctxFinalizer)
 {
 
-  *ctxInitializer = &contextInitializer;
-  *ctxFinalizer = &contextFinalizer;
- *extData = NULL;
-
+    *ctxInitializer = &contextInitializer;
+    *ctxFinalizer = &contextFinalizer;
+    *extData = NULL;
 }
 
 void MacOSFullScreenFinalizer(void* extData)
