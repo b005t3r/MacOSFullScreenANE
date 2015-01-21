@@ -31,5 +31,12 @@ public class MacOSFullScreenANE {
 
         _context.call("enableFullScreen");
     }
+
+    public function toggleFullScreen():void {
+        if(_verbose)
+            trace("[MacOSFullScreen] Toggling full screen.")
+
+        _context.call("toggleFullScreen");
+    }
 }
 }
