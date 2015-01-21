@@ -15,14 +15,22 @@ Add `MacOSFullScreen.ane` as a dependency and include this in your app's descrip
 </extensions>
 ```
 
-Then, in your app's code, as soon as the app starts call this:
+Then, in your app's code, ~~as soon as the app starts~~ in your Event.ADDED_TO_STAGE handler call this:
 
 ```as3
 var macOSFullScreen:MacOSFullScreenANE = new MacOSFullScreenANE(true);
 macOSFullScreen.enableFullScreen();
 ```
 
-That's it. You have native full screen support in your AIR app now.
+~~That's it. You have native full screen support in your AIR app now.~~ Doesn't work on Yosemite currenlty.
+
+You can also call:
+
+```as3
+macOSFullScreen.toggleFullScreen();
+```
+
+to manually enter or leave full screen mode.
 
 How to build it (hack it)?
 --------------------------
