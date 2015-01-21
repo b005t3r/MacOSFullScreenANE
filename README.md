@@ -22,7 +22,7 @@ var macOSFullScreen:MacOSFullScreenANE = new MacOSFullScreenANE(true);
 macOSFullScreen.enableFullScreen();
 ```
 
-~~That's it. You have native full screen support in your AIR app now.~~ Doesn't work on Yosemite currenlty.
+~~That's it. You have native full screen support in your AIR app now.~~ Doesn't work on Yosemite currently. Only ```toggleFullScreen()``` works.
 
 You can also call:
 
