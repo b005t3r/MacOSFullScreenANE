@@ -15,7 +15,7 @@ Add `MacOSFullScreen.ane` as a dependency and include this in your app's descrip
 </extensions>
 ```
 
-Then, in your app's code, ~~as soon as the app starts~~ in your Event.ADDED_TO_STAGE handler call this:
+Then, in your app's code, ~~as soon as the app starts~~ in your ```Event.ADDED_TO_STAGE``` handler call this:
 
 ```as3
 var macOSFullScreen:MacOSFullScreenANE = new MacOSFullScreenANE(true);
