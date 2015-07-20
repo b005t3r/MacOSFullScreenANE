@@ -15,14 +15,21 @@ Add `MacOSFullScreen.ane` as a dependency and include this in your app's descrip
 </extensions>
 ```
 
-Then, in your app's code, ~~as soon as the app starts~~ in your ```Event.ADDED_TO_STAGE``` handler call this:
+Then, in your app's ```Event.ADDED_TO_STAGE``` handler call this:
 
 ```as3
 var macOSFullScreen:MacOSFullScreenANE = new MacOSFullScreenANE(true);
-macOSFullScreen.enableFullScreen();
+macOSFullScreen.enableFullScreen(stage.nativeWindow);
 ```
 
-~~That's it. You have native full screen support in your AIR app now.~~ Doesn't work on Yosemite currently. Only ```toggleFullScreen()``` works.
+If you're going to target Max OS X Yosemite, you need to pass an optional parameter, which enables a workaround (credits to Jamie from Simplest Ways) for this version (and probably next ones):
+
+```as3
+var macOSFullScreen:MacOSFullScreenANE = new MacOSFullScreenANE(true);
+macOSFullScreen.enableFullScreen(stage.nativeWindow, true);
+```
+
+Now you can click the green maximize/minimize button to enter/leave the full screen mode or alt-click to maximize/minimize the window instead. 
 
 You can also call:
 
@@ -30,7 +37,7 @@ You can also call:
 macOSFullScreen.toggleFullScreen();
 ```
 
-to manually enter or leave full screen mode.
+to manually enter or leave the full screen mode.
 
 How to build it (hack it)?
 --------------------------
@@ -41,3 +48,4 @@ Special thanks
 --------------
 
 Special thanks to @kukulski (https://github.com/kukulski) for providing an example projects for all of this!
+Special thanks to Jamie from Simplest Ways (http://www.simplestways.com) for the Yosemite bug workaround!
