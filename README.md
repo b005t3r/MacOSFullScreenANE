@@ -22,7 +22,7 @@ var macOSFullScreen:MacOSFullScreenANE = new MacOSFullScreenANE(true);
 macOSFullScreen.enableFullScreen(stage.nativeWindow);
 ```
 
-If you're going to target Max OS X Yosemite, you need to pass an optional parameter, which enables a workaround (credits to Jamie from Simplest Ways) for this version (and probably next ones):
+If you're going to target Mac OS X Yosemite, you need to pass an optional parameter, which enables a workaround (credits to Jamie from Simplest Ways) for this version (and probably next ones):
 
 ```as3
 var macOSFullScreen:MacOSFullScreenANE = new MacOSFullScreenANE(true);
