@@ -7,7 +7,7 @@ TARGET=MacOSFullScreen
 
 rm -f $TARGET
 
-FLEX_SDK=/Users/booster/Documents/Flash/airsdk_4.0
+FLEX_SDK=/Users/booster/Documents/Flash/airsdk_17
 ADT=$FLEX_SDK/bin/adt
 
 echo $FLEX_SDK

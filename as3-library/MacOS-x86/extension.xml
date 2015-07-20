@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<extension xmlns="http://ns.adobe.com/air/extension/4.0">
+<extension xmlns="http://ns.adobe.com/air/extension/17.0">
 	<id>com.lazarecki.MacOSFullScreen</id>
-	<versionNumber>1.0.0</versionNumber>
+	<versionNumber>1.1.0</versionNumber>
 	<platforms> 
 	<platform name="MacOS-x86">
 			<applicationDeployment>
