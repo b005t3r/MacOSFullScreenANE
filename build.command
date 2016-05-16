@@ -1,13 +1,14 @@
 #!/bin/bash
-
 # set for debug
 # set -xv
 
 TARGET=MacOSFullScreen
 
+
 rm -f $TARGET
 
-FLEX_SDK=/Users/booster/Documents/Flash/airsdk_17
+# FLEX_SDK=/Users/booster/Documents/Flash/airsdk_17
+FLEX_SDK=/Users/xtendx/Workspace/Alex/SDK/Flex4.14_AIR17_FP17
 ADT=$FLEX_SDK/bin/adt
 
 echo $FLEX_SDK

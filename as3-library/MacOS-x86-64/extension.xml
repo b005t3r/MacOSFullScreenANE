@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension xmlns="http://ns.adobe.com/air/extension/20.0">
+	<id>com.lazarecki.MacOSFullScreen</id>
+	<versionNumber>1.1.0</versionNumber>
+	<platforms> 
+		
+		
+		<platform name="MacOS-x86-64">
+			<applicationDeployment>
+				<nativeLibrary>MacOSFullScreen.framework</nativeLibrary>
+				<initializer>MacOSFullScreenInitializer</initializer>
+				<finalizer>MacOSFullScreenFinalizer</finalizer>
+			</applicationDeployment> 
+		</platform> 
+		
+	</platforms>
+</extension>

@@ -11,5 +11,7 @@ bin-release/
 # information for Eclipse / Flash Builder.
 
 Output/
+Output_32/
 xcuserdata/
 project.xcworkspace/
+.DS_Store
