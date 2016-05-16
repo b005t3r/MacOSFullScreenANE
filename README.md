@@ -48,5 +48,5 @@ Special thanks
 --------------
 
 Special thanks to @kukulski (https://github.com/kukulski) for providing an example projects for all of this!
-
 Special thanks to Jamie from Simplest Ways (http://www.simplestways.com) for the Yosemite bug workaround!
+Special thanks to @kernelex (https://github.com/kernelex) for the 64-bit version of this ANE!
